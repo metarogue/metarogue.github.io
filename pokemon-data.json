@@ -1,0 +1,1061 @@
+{
+    "version": "1.0",
+    "lastUpdated": "2024-03-19",
+    "pokemonData": {
+        "Arceus": {
+            "tier": "Z",
+            "types": ["normal"],
+            "stats": { "hp": 120, "attack": 120, "defense": 120, "spAtk": 120, "spDef": 120, "speed": 120 },
+            "abilities": ["Multitype"],
+            "effectiveness": {
+                "weakTo": ["fighting"],
+                "resistantTo": [],
+                "immuneTo": ["ghost"]
+            }
+        },
+        "Mega-Rayquaza": {
+            "tier": "Z",
+            "types": ["dragon", "flying"],
+            "stats": {
+                "hp": 105,
+                "attack": 180,
+                "defense": 100,
+                "spAtk": 180,
+                "spDef": 100,
+                "speed": 115
+            },
+            "abilities": ["Delta Stream"],
+            "effectiveness": {
+                "weakTo": ["fairy", "dragon", "rock", "ice"],
+                "resistantTo": ["fighting", "bug", "grass", "ground", "water", "fire"],
+                "immuneTo": []
+            }
+        },
+        "Kyogre": {
+            "tier": "Z",
+            "types": ["water"],
+            "stats": {
+                "hp": 100,
+                "attack": 100,
+                "defense": 90,
+                "spAtk": 150,
+                "spDef": 140,
+                "speed": 90
+            },
+            "abilities": ["Drizzle"],
+            "effectiveness": {
+                "weakTo": ["grass", "electric"],
+                "resistantTo": ["steel", "fire", "water", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Groudon": {
+            "tier": "Z",
+            "types": ["ground"],
+            "stats": {
+                "hp": 100,
+                "attack": 150,
+                "defense": 140,
+                "spAtk": 100,
+                "spDef": 90,
+                "speed": 90
+            },
+            "abilities": ["Drought"],
+            "effectiveness": {
+                "weakTo": ["water", "grass", "ice"],
+                "resistantTo": ["poison", "rock"],
+                "immuneTo": ["electric"]
+            }
+        },
+        "Calyrex-Shadow": {
+            "tier": "Z",
+            "types": ["psychic", "ghost"],
+            "stats": {
+                "hp": 100,
+                "attack": 85,
+                "defense": 80,
+                "spAtk": 165,
+                "spDef": 100,
+                "speed": 150
+            },
+            "abilities": ["As One (Spectrier)"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark"],
+                "resistantTo": ["poison", "psychic"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Mega-Mewtwo-Y": {
+            "tier": "Z",
+            "types": ["psychic"],
+            "stats": {
+                "hp": 106,
+                "attack": 150,
+                "defense": 70,
+                "spAtk": 194,
+                "spDef": 120,
+                "speed": 140
+            },
+            "abilities": ["Insomnia"],
+            "effectiveness": {
+                "weakTo": ["dark", "ghost", "bug"],
+                "resistantTo": ["fighting", "psychic"],
+                "immuneTo": []
+            }
+        },
+        "Mewtwo": {
+            "tier": "Z",
+            "types": ["psychic"],
+            "stats": {
+                "hp": 106,
+                "attack": 110,
+                "defense": 90,
+                "spAtk": 154,
+                "spDef": 90,
+                "speed": 130
+            },
+            "abilities": ["Pressure", "Unnerve"],
+            "effectiveness": {
+                "weakTo": ["dark", "ghost", "bug"],
+                "resistantTo": ["fighting", "psychic"],
+                "immuneTo": []
+            }
+        },
+        "Marshadow": {
+            "tier": "Z",
+            "types": ["fighting", "ghost"],
+            "stats": {
+                "hp": 90,
+                "attack": 125,
+                "defense": 80,
+                "spAtk": 90,
+                "spDef": 90,
+                "speed": 125
+            },
+            "abilities": ["Technician"],
+            "effectiveness": {
+                "weakTo": ["ghost", "flying", "psychic", "fairy"],
+                "resistantTo": ["poison", "bug", "rock"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Necrozma-Dusk Mane": {
+            "tier": "S+",
+            "types": ["psychic", "steel"],
+            "stats": {
+                "hp": 97,
+                "attack": 157,
+                "defense": 127,
+                "spAtk": 113,
+                "spDef": 109,
+                "speed": 77
+            },
+            "abilities": ["Prism Armor"],
+            "effectiveness": {
+                "weakTo": ["fire", "ground", "ghost", "dark"],
+                "resistantTo": ["normal", "flying", "rock", "steel", "grass", "ice", "psychic", "dragon", "fairy"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Zacian-Crowned": {
+            "tier": "S+",
+            "types": ["fairy", "steel"],
+            "stats": {
+                "hp": 92,
+                "attack": 170,
+                "defense": 115,
+                "spAtk": 80,
+                "spDef": 115,
+                "speed": 148
+            },
+            "abilities": ["Intrepid Sword"],
+            "effectiveness": {
+                "weakTo": ["fire", "ground"],
+                "resistantTo": ["normal", "flying", "rock", "grass", "psychic", "ice", "dragon", "fairy"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Dragonite": {
+            "tier": "S+",
+            "types": ["dragon", "flying"],
+            "stats": {
+                "hp": 91,
+                "attack": 134,
+                "defense": 95,
+                "spAtk": 100,
+                "spDef": 100,
+                "speed": 80
+            },
+            "abilities": ["Inner Focus", "Multiscale"],
+            "effectiveness": {
+                "weakTo": ["rock", "ice", "dragon", "fairy"],
+                "resistantTo": ["fighting", "bug", "grass", "ground", "water", "fire"],
+                "immuneTo": []
+            }
+        },
+        "Magearna": {
+            "tier": "S+",
+            "types": ["steel", "fairy"],
+            "stats": {
+                "hp": 80,
+                "attack": 95,
+                "defense": 115,
+                "spAtk": 130,
+                "spDef": 115,
+                "speed": 65
+            },
+            "abilities": ["Soul-Heart"],
+            "effectiveness": {
+                "weakTo": ["fire", "ground"],
+                "resistantTo": ["normal", "flying", "rock", "grass", "psychic", "ice", "dragon", "fairy"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Aegislash": {
+            "tier": "S+",
+            "types": ["steel", "ghost"],
+            "stats": {
+                "hp": 60,
+                "attack": 50,
+                "defense": 150,
+                "spAtk": 50,
+                "spDef": 150,
+                "speed": 60
+            },
+            "abilities": ["Stance Change"],
+            "effectiveness": {
+                "weakTo": ["fire", "ground", "ghost", "dark"],
+                "resistantTo": ["normal", "flying", "rock", "bug", "steel", "grass", "psychic", "ice", "dragon", "fairy"],
+                "immuneTo": ["normal", "fighting", "poison"]
+            }
+        },
+        "Mimikyu": {
+            "tier": "S+",
+            "types": ["ghost", "fairy"],
+            "stats": {
+                "hp": 55,
+                "attack": 90,
+                "defense": 80,
+                "spAtk": 50,
+                "spDef": 105,
+                "speed": 96
+            },
+            "abilities": ["Disguise"],
+            "effectiveness": {
+                "weakTo": ["ghost", "steel"],
+                "resistantTo": ["fighting", "bug"],
+                "immuneTo": ["normal", "dragon"]
+            }
+        },
+        "Xerneas": {
+            "tier": "S+",
+            "types": ["fairy"],
+            "stats": {
+                "hp": 126,
+                "attack": 131,
+                "defense": 95,
+                "spAtk": 131,
+                "spDef": 98,
+                "speed": 99
+            },
+            "abilities": ["Fairy Aura"],
+            "effectiveness": {
+                "weakTo": ["steel", "poison"],
+                "resistantTo": ["fighting", "bug", "dark"],
+                "immuneTo": ["dragon"]
+            }
+        },
+        "Mega-Salamence": {
+            "tier": "S+",
+            "types": ["dragon", "flying"],
+            "stats": {
+                "hp": 95,
+                "attack": 145,
+                "defense": 130,
+                "spAtk": 120,
+                "spDef": 90,
+                "speed": 120
+            },
+            "abilities": ["Aerilate"],
+            "effectiveness": {
+                "weakTo": ["rock", "ice", "dragon", "fairy"],
+                "resistantTo": ["fighting", "bug", "grass", "ground", "water", "fire"],
+                "immuneTo": []
+            }
+        },
+        "Darmanitan-Galar": {
+            "tier": "S",
+            "types": ["ice"],
+            "stats": {
+                "hp": 105,
+                "attack": 140,
+                "defense": 55,
+                "spAtk": 30,
+                "spDef": 55,
+                "speed": 95
+            },
+            "abilities": ["Gorilla Tactics", "Zen Mode"],
+            "effectiveness": {
+                "weakTo": ["fighting", "rock", "steel", "fire"],
+                "resistantTo": ["ice"],
+                "immuneTo": []
+            }
+        },
+        "Dragapult": {
+            "tier": "S",
+            "types": ["dragon", "ghost"],
+            "stats": {
+                "hp": 88,
+                "attack": 120,
+                "defense": 75,
+                "spAtk": 100,
+                "spDef": 75,
+                "speed": 142
+            },
+            "abilities": ["Clear Body", "Infiltrator", "Cursed Body"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "ice", "fairy"],
+                "resistantTo": ["bug", "poison"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Excadrill": {
+            "tier": "S",
+            "types": ["ground", "steel"],
+            "stats": {
+                "hp": 110,
+                "attack": 135,
+                "defense": 60,
+                "spAtk": 50,
+                "spDef": 65,
+                "speed": 88
+            },
+            "abilities": ["Sand Rush", "Sand Force", "Mold Breaker"],
+            "effectiveness": {
+                "weakTo": ["fire", "water", "fighting", "ground"],
+                "resistantTo": ["normal", "flying", "rock", "bug", "steel", "electric"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Mega-Lucario": {
+            "tier": "S",
+            "types": ["fighting", "steel"],
+            "stats": {
+                "hp": 70,
+                "attack": 145,
+                "defense": 88,
+                "spAtk": 140,
+                "spDef": 70,
+                "speed": 112
+            },
+            "abilities": ["Adaptability"],
+            "effectiveness": {
+                "weakTo": ["fire", "fighting", "ground"],
+                "resistantTo": ["normal", "rock", "bug", "steel", "grass", "ice", "dragon", "dark"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Zygarde-Complete": {
+            "tier": "S",
+            "types": ["dragon", "ground"],
+            "stats": {
+                "hp": 216,
+                "attack": 100,
+                "defense": 121,
+                "spAtk": 91,
+                "spDef": 95,
+                "speed": 85
+            },
+            "abilities": ["Power Construct"],
+            "effectiveness": {
+                "weakTo": ["ice", "dragon", "fairy"],
+                "resistantTo": ["poison", "rock", "fire"],
+                "immuneTo": ["electric"]
+            }
+        },
+        "Suicune": {
+            "tier": "A",
+            "types": ["water"],
+            "stats": {
+                "hp": 100,
+                "attack": 75,
+                "defense": 115,
+                "spAtk": 90,
+                "spDef": 115,
+                "speed": 85
+            },
+            "abilities": ["Pressure", "Inner Focus"],
+            "effectiveness": {
+                "weakTo": ["grass", "electric"],
+                "resistantTo": ["steel", "fire", "water", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Slowbro": {
+            "tier": "A",
+            "types": ["water", "psychic"],
+            "stats": {
+                "hp": 95,
+                "attack": 75,
+                "defense": 110,
+                "spAtk": 100,
+                "spDef": 80,
+                "speed": 30
+            },
+            "abilities": ["Oblivious", "Own Tempo", "Regenerator"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "grass", "electric", "bug"],
+                "resistantTo": ["fighting", "steel", "fire", "water", "psychic", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Mega-Lopunny": {
+            "tier": "B",
+            "types": ["normal", "fighting"],
+            "stats": {
+                "hp": 65,
+                "attack": 136,
+                "defense": 94,
+                "spAtk": 54,
+                "spDef": 96,
+                "speed": 135
+            },
+            "abilities": ["Scrappy"],
+            "effectiveness": {
+                "weakTo": ["flying", "psychic", "fairy"],
+                "resistantTo": ["bug", "rock", "dark"],
+                "immuneTo": []
+            }
+        },
+        "Blacephalon": {
+            "tier": "B",
+            "types": ["fire", "ghost"],
+            "stats": {
+                "hp": 53,
+                "attack": 127,
+                "defense": 53,
+                "spAtk": 151,
+                "spDef": 79,
+                "speed": 107
+            },
+            "abilities": ["Beast Boost"],
+            "effectiveness": {
+                "weakTo": ["water", "ground", "rock", "ghost", "dark"],
+                "resistantTo": ["poison", "bug", "steel", "fire", "grass", "ice", "fairy"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Mega-Charizard-X": {
+            "tier": "B",
+            "types": ["fire", "dragon"],
+            "stats": {
+                "hp": 78,
+                "attack": 130,
+                "defense": 111,
+                "spAtk": 130,
+                "spDef": 85,
+                "speed": 100
+            },
+            "abilities": ["Tough Claws"],
+            "effectiveness": {
+                "weakTo": ["rock", "ground", "dragon"],
+                "resistantTo": ["fire", "grass", "fighting", "bug", "steel"],
+                "immuneTo": []
+            }
+        },
+        "Lycanroc-Dusk": {
+            "tier": "C",
+            "types": ["rock"],
+            "stats": {
+                "hp": 75,
+                "attack": 117,
+                "defense": 65,
+                "spAtk": 55,
+                "spDef": 65,
+                "speed": 110
+            },
+            "abilities": ["Tough Claws"],
+            "effectiveness": {
+                "weakTo": ["water", "grass", "fighting", "ground", "steel"],
+                "resistantTo": ["normal", "flying", "poison", "fire"],
+                "immuneTo": []
+            }
+        },
+        "Archeops": {
+            "tier": "C",
+            "types": ["rock", "flying"],
+            "stats": {
+                "hp": 75,
+                "attack": 140,
+                "defense": 65,
+                "spAtk": 112,
+                "spDef": 65,
+                "speed": 110
+            },
+            "abilities": ["Defeatist"],
+            "effectiveness": {
+                "weakTo": ["water", "electric", "ice", "rock", "steel"],
+                "resistantTo": ["normal", "flying", "poison", "fire", "bug"],
+                "immuneTo": ["ground"]
+            }
+        },
+        "Lilligant-Hisui": {
+            "tier": "C",
+            "types": ["grass", "fighting"],
+            "stats": {
+                "hp": 70,
+                "attack": 105,
+                "defense": 75,
+                "spAtk": 50,
+                "spDef": 75,
+                "speed": 105
+            },
+            "abilities": ["Chlorophyll", "Hustle", "Leaf Guard"],
+            "effectiveness": {
+                "weakTo": ["flying", "poison", "ice", "psychic", "fairy"],
+                "resistantTo": ["ground", "water", "grass", "electric", "dark"],
+                "immuneTo": []
+            }
+        },
+        "Mega-Sceptile": {
+            "tier": "D",
+            "types": ["grass", "dragon"],
+            "stats": {
+                "hp": 70,
+                "attack": 110,
+                "defense": 75,
+                "spAtk": 145,
+                "spDef": 85,
+                "speed": 145
+            },
+            "abilities": ["Lightning Rod"],
+            "effectiveness": {
+                "weakTo": ["flying", "poison", "bug", "ice", "dragon", "fairy"],
+                "resistantTo": ["ground", "water", "grass", "electric"],
+                "immuneTo": []
+            }
+        },
+        "Mega-Glalie": {
+            "tier": "D",
+            "types": ["ice"],
+            "stats": {
+                "hp": 80,
+                "attack": 120,
+                "defense": 80,
+                "spAtk": 120,
+                "spDef": 80,
+                "speed": 100
+            },
+            "abilities": ["Refrigerate"],
+            "effectiveness": {
+                "weakTo": ["fighting", "rock", "steel", "fire"],
+                "resistantTo": ["ice"],
+                "immuneTo": []
+            }
+        },
+        "Raichu-Alola": {
+            "tier": "D",
+            "types": ["electric", "psychic"],
+            "stats": {
+                "hp": 60,
+                "attack": 85,
+                "defense": 50,
+                "spAtk": 95,
+                "spDef": 85,
+                "speed": 110
+            },
+            "abilities": ["Surge Surfer"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "ground", "bug"],
+                "resistantTo": ["fighting", "flying", "electric", "psychic", "steel"],
+                "immuneTo": []
+            }
+        },
+        "Shuckle": {
+            "tier": "E",
+            "types": ["bug", "rock"],
+            "stats": {
+                "hp": 20,
+                "attack": 10,
+                "defense": 230,
+                "spAtk": 10,
+                "spDef": 230,
+                "speed": 5
+            },
+            "abilities": ["Sturdy", "Gluttony", "Contrary"],
+            "effectiveness": {
+                "weakTo": ["water", "rock", "steel"],
+                "resistantTo": ["normal", "poison"],
+                "immuneTo": []
+            }
+        },
+        "Dewgong": {
+            "tier": "E",
+            "types": ["water", "ice"],
+            "stats": {
+                "hp": 90,
+                "attack": 70,
+                "defense": 80,
+                "spAtk": 70,
+                "spDef": 95,
+                "speed": 70
+            },
+            "abilities": ["Thick Fat", "Hydration", "Ice Body"],
+            "effectiveness": {
+                "weakTo": ["grass", "electric", "fighting", "rock"],
+                "resistantTo": ["water", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Lumineon": {
+            "tier": "E",
+            "types": ["water"],
+            "stats": {
+                "hp": 69,
+                "attack": 69,
+                "defense": 76,
+                "spAtk": 69,
+                "spDef": 86,
+                "speed": 91
+            },
+            "abilities": ["Swift Swim", "Storm Drain", "Water Veil"],
+            "effectiveness": {
+                "weakTo": ["grass", "electric"],
+                "resistantTo": ["steel", "fire", "water", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Ledian": {
+            "tier": "F",
+            "types": ["bug", "flying"],
+            "stats": {
+                "hp": 55,
+                "attack": 35,
+                "defense": 50,
+                "spAtk": 55,
+                "spDef": 110,
+                "speed": 85
+            },
+            "abilities": ["Swarm", "Early Bird", "Iron Fist"],
+            "effectiveness": {
+                "weakTo": ["flying", "rock", "fire", "electric", "ice"],
+                "resistantTo": ["fighting", "ground", "bug", "grass"],
+                "immuneTo": []
+            }
+        },
+        "Pachirisu": {
+            "tier": "F",
+            "types": ["electric"],
+            "stats": {
+                "hp": 60,
+                "attack": 45,
+                "defense": 70,
+                "spAtk": 45,
+                "spDef": 90,
+                "speed": 95
+            },
+            "abilities": ["Run Away", "Pickup", "Volt Absorb"],
+            "effectiveness": {
+                "weakTo": ["ground"],
+                "resistantTo": ["flying", "steel", "electric"],
+                "immuneTo": []
+            }
+        },
+        "Parasect": {
+            "tier": "F",
+            "types": ["bug", "grass"],
+            "stats": {
+                "hp": 60,
+                "attack": 95,
+                "defense": 80,
+                "spAtk": 60,
+                "spDef": 80,
+                "speed": 30
+            },
+            "abilities": ["Effect Spore", "Dry Skin", "Damp"],
+            "effectiveness": {
+                "weakTo": ["flying", "rock", "fire", "ice", "poison", "bug"],
+                "resistantTo": ["ground", "water", "grass", "electric", "fighting"],
+                "immuneTo": []
+            }
+        },
+        "Beautifly": {
+            "tier": "F",
+            "types": ["bug", "flying"],
+            "stats": {
+                "hp": 60,
+                "attack": 70,
+                "defense": 50,
+                "spAtk": 100,
+                "spDef": 50,
+                "speed": 65
+            },
+            "abilities": ["Swarm", "Rivalry"],
+            "effectiveness": {
+                "weakTo": ["flying", "rock", "fire", "electric", "ice"],
+                "resistantTo": ["fighting", "ground", "bug", "grass"],
+                "immuneTo": []
+            }
+        },
+        "Delibird": {
+            "tier": "F",
+            "types": ["ice", "flying"],
+            "stats": {
+                "hp": 45,
+                "attack": 55,
+                "defense": 45,
+                "spAtk": 65,
+                "spDef": 45,
+                "speed": 75
+            },
+            "abilities": ["Vital Spirit", "Hustle", "Insomnia"],
+            "effectiveness": {
+                "weakTo": ["rock", "steel", "fire", "electric"],
+                "resistantTo": ["ground", "grass", "bug"],
+                "immuneTo": []
+            }
+        },
+        "Luvdisc": {
+            "tier": "F",
+            "types": ["water"],
+            "stats": {
+                "hp": 43,
+                "attack": 30,
+                "defense": 55,
+                "spAtk": 40,
+                "spDef": 65,
+                "speed": 97
+            },
+            "abilities": ["Swift Swim", "Hydration"],
+            "effectiveness": {
+                "weakTo": ["grass", "electric"],
+                "resistantTo": ["steel", "fire", "water", "ice"],
+                "immuneTo": []
+            }
+        },
+        "Yveltal": {
+            "tier": "S+",
+            "types": ["dark", "flying"],
+            "stats": {
+                "hp": 126,
+                "attack": 131,
+                "defense": 95,
+                "spAtk": 131,
+                "spDef": 98,
+                "speed": 99
+            },
+            "abilities": ["Dark Aura"],
+            "effectiveness": {
+                "weakTo": ["rock", "electric", "ice", "fairy"],
+                "resistantTo": ["ground", "ghost", "dark", "grass"],
+                "immuneTo": ["psychic"]
+            }
+        },
+        "Lunala": {
+            "tier": "S+",
+            "types": ["psychic", "ghost"],
+            "stats": {
+                "hp": 137,
+                "attack": 113,
+                "defense": 89,
+                "spAtk": 137,
+                "spDef": 107,
+                "speed": 97
+            },
+            "abilities": ["Shadow Shield"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark"],
+                "resistantTo": ["fighting", "poison", "psychic"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Mega-Gengar": {
+            "tier": "S+",
+            "types": ["ghost", "poison"],
+            "stats": {
+                "hp": 60,
+                "attack": 65,
+                "defense": 80,
+                "spAtk": 170,
+                "spDef": 95,
+                "speed": 130
+            },
+            "abilities": ["Shadow Tag"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "psychic", "ground"],
+                "resistantTo": ["poison", "bug", "grass", "fairy"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Jirachi": {
+            "tier": "S+",
+            "types": ["steel", "psychic"],
+            "stats": {
+                "hp": 100,
+                "attack": 100,
+                "defense": 100,
+                "spAtk": 100,
+                "spDef": 100,
+                "speed": 100
+            },
+            "abilities": ["Serene Grace"],
+            "effectiveness": {
+                "weakTo": ["ghost", "fire", "dark", "ground"],
+                "resistantTo": ["psychic", "rock", "ice", "dragon", "fairy", "flying", "normal", "grass", "steel"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Mew": {
+            "tier": "S+",
+            "types": ["psychic"],
+            "stats": {
+                "hp": 100,
+                "attack": 100,
+                "defense": 100,
+                "spAtk": 100,
+                "spDef": 100,
+                "speed": 100
+            },
+            "abilities": ["Synchronize"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "bug"],
+                "resistantTo": ["fighting", "psychic"],
+                "immuneTo": []
+            }
+        },
+        "Gliscor": {
+            "tier": "S+",
+            "types": ["ground", "flying"],
+            "stats": {
+                "hp": 75,
+                "attack": 95,
+                "defense": 125,
+                "spAtk": 45,
+                "spDef": 75,
+                "speed": 95
+            },
+            "abilities": ["Hyper Cutter", "Sand Veil", "Poison Heal"],
+            "effectiveness": {
+                "weakTo": ["ice"],
+                "resistantTo": ["fighting", "poison", "bug", "ground"],
+                "immuneTo": ["electric"]
+            }
+        },
+        "Gengar": {
+            "tier": "S",
+            "types": ["ghost", "poison"],
+            "stats": {
+                "hp": 60,
+                "attack": 65,
+                "defense": 60,
+                "spAtk": 130,
+                "spDef": 75,
+                "speed": 110
+            },
+            "abilities": ["Cursed Body"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "psychic", "ground"],
+                "resistantTo": ["poison", "bug", "grass", "fairy"],
+                "immuneTo": ["normal", "fighting"]
+            }
+        },
+        "Lugia": {
+            "tier": "S",
+            "types": ["psychic", "flying"],
+            "stats": {
+                "hp": 106,
+                "attack": 90,
+                "defense": 130,
+                "spAtk": 90,
+                "spDef": 154,
+                "speed": 110
+            },
+            "abilities": ["Pressure", "Multiscale"],
+            "effectiveness": {
+                "weakTo": ["ghost", "dark", "electric", "ice", "rock"],
+                "resistantTo": ["fighting", "ground", "psychic", "grass"],
+                "immuneTo": []
+            }
+        },
+        "Landorus-Therian": {
+            "tier": "S",
+            "types": ["ground", "flying"],
+            "stats": {
+                "hp": 89,
+                "attack": 145,
+                "defense": 90,
+                "spAtk": 105,
+                "spDef": 80,
+                "speed": 91
+            },
+            "abilities": ["Intimidate"],
+            "effectiveness": {
+                "weakTo": ["ice"],
+                "resistantTo": ["fighting", "poison", "bug", "ground"],
+                "immuneTo": ["electric"]
+            }
+        },
+        "Ho-oh": {
+            "tier": "S",
+            "types": ["fire", "flying"],
+            "stats": {
+                "hp": 106,
+                "attack": 130,
+                "defense": 90,
+                "spAtk": 110,
+                "spDef": 154,
+                "speed": 90
+            },
+            "abilities": ["Pressure", "Regenerator"],
+            "effectiveness": {
+                "weakTo": ["water", "electric", "rock"],
+                "resistantTo": ["fighting", "bug", "steel", "fire", "grass", "fairy"],
+                "immuneTo": ["ground"]
+            }
+        },
+        "Volcarona": {
+            "tier": "S",
+            "types": ["bug", "fire"],
+            "stats": {
+                "hp": 85,
+                "attack": 60,
+                "defense": 65,
+                "spAtk": 135,
+                "spDef": 105,
+                "speed": 100
+            },
+            "abilities": ["Flame Body", "Swarm"],
+            "effectiveness": {
+                "weakTo": ["water", "flying", "rock"],
+                "resistantTo": ["fighting", "bug", "steel", "grass", "ice", "fairy"],
+                "immuneTo": []
+            }
+        },
+        "Garchomp": {
+            "tier": "S",
+            "types": ["dragon", "ground"],
+            "stats": {
+                "hp": 108,
+                "attack": 130,
+                "defense": 95,
+                "spAtk": 80,
+                "spDef": 85,
+                "speed": 102
+            },
+            "abilities": ["Sand Veil", "Rough Skin"],
+            "effectiveness": {
+                "weakTo": ["ice", "dragon", "fairy"],
+                "resistantTo": ["poison", "rock", "fire"],
+                "immuneTo": ["electric"]
+            }
+        },
+        "Zamazenta-Crowned": {
+            "tier": "S",
+            "types": ["fighting", "steel"],
+            "stats": {
+                "hp": 92,
+                "attack": 130,
+                "defense": 145,
+                "spAtk": 80,
+                "spDef": 145,
+                "speed": 128
+            },
+            "abilities": ["Dauntless Shield"],
+            "effectiveness": {
+                "weakTo": ["fire", "fighting", "ground"],
+                "resistantTo": ["normal", "rock", "bug", "steel", "grass", "ice", "dragon", "dark"],
+                "immuneTo": ["poison"]
+            }
+        },
+        "Urshifu-Single": {
+            "tier": "S",
+            "types": ["fighting", "dark"],
+            "stats": {
+                "hp": 100,
+                "attack": 130,
+                "defense": 100,
+                "spAtk": 63,
+                "spDef": 60,
+                "speed": 97
+            },
+            "abilities": ["Unseen Fist"],
+            "effectiveness": {
+                "weakTo": ["flying", "fairy"],
+                "resistantTo": ["rock", "ghost", "dark"],
+                "immuneTo": ["psychic"]
+            }
+        },
+        "Kyurem-White": {
+            "tier": "S",
+            "types": ["dragon", "ice"],
+            "stats": {
+                "hp": 125,
+                "attack": 120,
+                "defense": 90,
+                "spAtk": 170,
+                "spDef": 100,
+                "speed": 95
+            },
+            "abilities": ["Turboblaze"],
+            "effectiveness": {
+                "weakTo": ["rock", "steel", "dragon", "fairy", "fighting"],
+                "resistantTo": ["water", "grass"],
+                "immuneTo": []
+            }
+        },
+        "Blaziken": {
+            "tier": "S",
+            "types": ["fire", "fighting"],
+            "stats": {
+                "hp": 80,
+                "attack": 120,
+                "defense": 70,
+                "spAtk": 110,
+                "spDef": 70,
+                "speed": 80
+            },
+            "abilities": ["Blaze", "Speed Boost"],
+            "effectiveness": {
+                "weakTo": ["water", "ground", "flying", "psychic"],
+                "resistantTo": ["bug", "steel", "fire", "grass", "ice", "dark"],
+                "immuneTo": []
+            }
+        },
+        "Tapu Koko": {
+            "tier": "S",
+            "types": ["electric", "fairy"],
+            "stats": {
+                "hp": 70,
+                "attack": 115,
+                "defense": 85,
+                "spAtk": 95,
+                "spDef": 75,
+                "speed": 130
+            },
+            "abilities": ["Electric Surge", "Telepathy"],
+            "effectiveness": {
+                "weakTo": ["poison", "ground"],
+                "resistantTo": ["fighting", "flying", "bug", "dark", "electric"],
+                "immuneTo": ["dragon"]
+            }
+        },
+        "Greninja": {
+            "tier": "S",
+            "types": ["water", "dark"],
+            "stats": {
+                "hp": 72,
+                "attack": 95,
+                "defense": 67,
+                "spAtk": 103,
+                "spDef": 71,
+                "speed": 122
+            },
+            "abilities": ["Torrent", "Protean", "Battle Bond"],
+            "effectiveness": {
+                "weakTo": ["fighting", "bug", "electric", "grass", "fairy"],
+                "resistantTo": ["ghost", "steel", "fire", "water", "ice", "dark"],
+                "immuneTo": ["psychic"]
+            }
+        }
+    }
+} 

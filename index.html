@@ -15,50 +15,76 @@
                     <span class="circle"></span>
                 </span>
             </label>
-            <h1>Emerald Rogue 2.0 Tier List</h1>
+            <div class="header-titles">
+                <h1>MetaRogue</h1>
+                <h2>Emerald Rogue 2.0 Tier List</h2>
+            </div>
             <div class="search-container">
                 <input type="text" id="pokemonSearch" placeholder="Search Pokémon...">
             </div>
         </div>
-        <div class="tier-list">
-            <div class="tier" data-tier="Z">
-                <div class="tier-label">Z</div>
-                <div class="tier-pokemon"></div>
+        <div class="gen-filters">
+            <label><input type="checkbox" data-gen="1" checked> Gen 1</label>
+            <label><input type="checkbox" data-gen="2" checked> Gen 2</label>
+            <label><input type="checkbox" data-gen="3" checked> Gen 3</label>
+            <label><input type="checkbox" data-gen="4" checked> Gen 4</label>
+            <label><input type="checkbox" data-gen="5" checked> Gen 5</label>
+            <label><input type="checkbox" data-gen="6" checked> Gen 6</label>
+            <label><input type="checkbox" data-gen="7" checked> Gen 7</label>
+            <label><input type="checkbox" data-gen="8" checked> Gen 8</label>
+            <label><input type="checkbox" data-gen="forms" checked> Forms</label>
+        </div>
+        <div class="content-wrapper">
+            <div class="tier-list">
+                <div class="tier" data-tier="Z">
+                    <div class="tier-label">Z</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="S+">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="S">
+                    <div class="tier-label">S</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="A">
+                    <div class="tier-label">A</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="B">
+                    <div class="tier-label">B</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="C">
+                    <div class="tier-label">C</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="D">
+                    <div class="tier-label">D</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="E">
+                    <div class="tier-label">E</div>
+                    <div class="tier-pokemon"></div>
+                </div>
+                <div class="tier" data-tier="F">
+                    <div class="tier-label">F</div>
+                    <div class="tier-pokemon"></div>
+                </div>
             </div>
-            <div class="tier" data-tier="S+">
-                <div class="tier-label">S+</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="S">
-                <div class="tier-label">S</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="A">
-                <div class="tier-label">A</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="B">
-                <div class="tier-label">B</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="C">
-                <div class="tier-label">C</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="D">
-                <div class="tier-label">D</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="E">
-                <div class="tier-label">E</div>
-                <div class="tier-pokemon"></div>
-            </div>
-            <div class="tier" data-tier="F">
-                <div class="tier-label">F</div>
-                <div class="tier-pokemon"></div>
+            <div class="team-panel">
+                <h2>Your Team</h2>
+                <div class="team-slots">
+                    <div class="team-slot empty" data-slot="1"></div>
+                    <div class="team-slot empty" data-slot="2"></div>
+                    <div class="team-slot empty" data-slot="3"></div>
+                    <div class="team-slot empty" data-slot="4"></div>
+                    <div class="team-slot empty" data-slot="5"></div>
+                    <div class="team-slot empty" data-slot="6"></div>
+                </div>
             </div>
         </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html> 

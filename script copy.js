@@ -1339,15 +1339,7 @@ function initializePokemonHover() {
     const hoverCard = document.createElement('div');
     hoverCard.className = 'pokemon-hover-card';
     hoverCard.innerHTML = `
-        <div class="pokemon-header">
-            <div class="sprite-container">
-                <img src="" alt="">
-            </div>
-            <div class="pokemon-header-details">
-                <div class="name"></div>
-                <div class="types"></div>
-            </div>
-        </div>
+        <div class="types"></div>
         <div class="stats"></div>
         <div class="abilities"></div>
         <div class="effectiveness">
@@ -1360,22 +1352,18 @@ function initializePokemonHover() {
     `;
     document.body.appendChild(hoverCard);
 
+    // Update selector to include both tier list and team builder Pokémon
     const pokemonCards = document.querySelectorAll('.pokemon-card, .team-slot:not(.empty)');
     
     pokemonCards.forEach(card => {
         card.addEventListener('mouseenter', (e) => {
+            // Get Pokémon name from either card type
             const nameElement = card.querySelector('.name');
             const pokemonName = nameElement ? nameElement.textContent : card.getAttribute('data-pokemon');
-            const pokemonImage = card.querySelector('img').src;
             
             const data = getPokemonStats(pokemonName);
             
             if (data) {
-                // Update header with sprite and name
-                hoverCard.querySelector('.sprite-container img').src = pokemonImage;
-                hoverCard.querySelector('.sprite-container img').alt = pokemonName;
-                hoverCard.querySelector('.name').textContent = pokemonName;
-
                 // Update types
                 const typesHtml = data.types.map(type => 
                     `<div class="type-badge" style="background-color: var(--${type}-color)">${type.toUpperCase()}</div>`
@@ -1430,29 +1418,20 @@ function initializePokemonHover() {
                     }
                 });
 
-                // Update abilities with formatting and less spacing
+                // Update abilities with formatting
                 if (data.abilities) {
                     const abilities = [...data.abilities];
                     if (abilities.length > 1) {
                         const hiddenAbility = abilities.pop();
                         const regularAbilitiesHtml = abilities.map(ability => 
-                            `<div class="ability-item">${ability}
-                                <span class="ability-desc">${ABILITY_DESCRIPTIONS[ability] || ''}</span>
-                            </div>`
-                        ).join('');
+                            `${ability}<span class="ability-desc">${ABILITY_DESCRIPTIONS[ability] || ''}</span>`
+                        ).join('\n');
                         
                         hoverCard.querySelector('.abilities').innerHTML = 
-                            `${regularAbilitiesHtml}
-                            <div class="ability-item hidden">
-                                ${hiddenAbility}<span class="ha-tag">(HA)</span>
-                                <span class="ability-desc">${ABILITY_DESCRIPTIONS[hiddenAbility] || ''}</span>
-                            </div>`;
+                            `${regularAbilitiesHtml}\n<span class="hidden"><span class="ability-name">${hiddenAbility}</span> <span class="ha-tag">(HA)</span></span><span class="ability-desc">${ABILITY_DESCRIPTIONS[hiddenAbility] || ''}</span>`;
                     } else {
                         const ability = abilities[0];
-                        hoverCard.querySelector('.abilities').innerHTML = 
-                            `<div class="ability-item">${ability}
-                                <span class="ability-desc">${ABILITY_DESCRIPTIONS[ability] || ''}</span>
-                            </div>`;
+                        hoverCard.querySelector('.abilities').innerHTML = `${ability}<span class="ability-desc">${ABILITY_DESCRIPTIONS[ability] || ''}</span>`;
                     }
                 }
 
@@ -1954,278 +1933,12 @@ if (!hoverCard) {
     console.error('Hover card element not found');
 }
 
-// Replace the existing ABILITY_DESCRIPTIONS object
+// Add this near the top with other constants
 const ABILITY_DESCRIPTIONS = {
     "Hyper Cutter": "Prevents Attack stat from being lowered by other Pokémon",
     "Sand Veil": "Boosts evasion during a sandstorm",
     "Poison Heal": "Restores HP if the Pokémon is poisoned, instead of taking damage",
     "Intimidate": "Lowers opponent's Attack stat when entering battle",
     "Moxie": "Boosts Attack after knocking out any Pokémon",
-    "Adaptability": "Powers up moves of the same type as the Pokémon",
-    "Aerilate": "Turns Normal-type moves into Flying-type moves",
-    "Aftermath": "Damages the attacker when knocked out by contact moves",
-    "Air Lock": "Negates all weather effects",
-    "Analytic": "Moves deal more damage when moving last",
-    "Anger Point": "Maxes Attack when hit by a critical hit",
-    "Anticipation": "Senses dangerous moves before they are used",
-    "Arena Trap": "Prevents opponents from fleeing",
-    "Aroma Veil": "Protects allies from mental effects",
-    "As One": "Combines Unnerve and Chilling Neigh/Grim Neigh",
-    "Aura Break": "Reverses effects of Dark Aura and Fairy Aura",
-    "Bad Dreams": "Reduces HP of sleeping opponents",
-    "Ball Fetch": "Retrieves a failed Poké Ball throw",
-    "Battery": "Powers up allies' Special moves",
-    "Battle Armor": "Protects against critical hits",
-    "Battle Bond": "Transform into Ash-Greninja after KOing a Pokémon",
-    "Beast Boost": "Strongest stat rises after KOing a Pokémon",
-    "Berserk": "Raises Special Attack when HP drops below half",
-    "Big Pecks": "Protects against Defense drops",
-    "Blaze": "Powers up Fire moves in a pinch",
-    "Bulletproof": "Protects against ball and bomb moves",
-    "Cheek Pouch": "Restores HP when consuming a Berry",
-    "Chlorophyll": "Doubles Speed in sunshine",
-    "Clear Body": "Prevents stat drops by opponents",
-    "Cloud Nine": "Negates all weather effects",
-    "Color Change": "Changes type to match move used against it",
-    "Comatose": "Always acts as if asleep",
-    "Competitive": "Raises Special Attack when stats are lowered",
-    "Compound Eyes": "Increases move accuracy",
-    "Contrary": "Reverses stat changes",
-    "Corrosion": "Can poison Steel and Poison-type Pokémon",
-    "Cotton Down": "Lowers Speed of all Pokémon when hit",
-    "Cursed Body": "May disable moves that hit the Pokémon",
-    "Cute Charm": "May infatuate on contact",
-    "Damp": "Prevents self-destructing moves",
-    "Dancer": "Copies dancing moves",
-    "Dark Aura": "Powers up Dark-type moves",
-    "Dauntless Shield": "Boosts Defense in battle",
-    "Dazzling": "Protects against priority moves",
-    "Defeatist": "Halves Attack and Sp. Attack at low HP",
-    "Defiant": "Raises Attack when stats are lowered",
-    "Delta Stream": "Creates strong winds that protect Flying-type Pokémon",
-    "Desolate Land": "Creates extremely harsh sunlight",
-    "Disguise": "Takes one hit without damage",
-    "Download": "Adjusts stats based on opponents' defenses",
-    "Dragon's Maw": "Powers up Dragon-type moves",
-    "Drizzle": "Summons rain when entering battle",
-    "Drought": "Summons sunshine when entering battle",
-    "Dry Skin": "Restores HP in rain, weak to Fire moves",
-    "Early Bird": "Wakes up quickly from sleep",
-    "Effect Spore": "May inflict status effects on contact",
-    "Electric Surge": "Creates Electric Terrain",
-    "Emergency Exit": "Switches out when HP is low",
-    "Fairy Aura": "Powers up Fairy-type moves",
-    "Filter": "Reduces super-effective damage",
-    "Flame Body": "May burn on contact",
-    "Flare Boost": "Powers up Special moves when burned",
-    "Flash Fire": "Powers up Fire moves when hit by one",
-    "Flower Gift": "Powers up party in sunshine",
-    "Flower Veil": "Protects Grass-type allies",
-    "Fluffy": "Takes half damage from contact moves, double from Fire",
-    "Forecast": "Changes form with weather",
-    "Forewarn": "Reveals opponent's strongest move",
-    "Friend Guard": "Reduces damage to allies",
-    "Frisk": "Reveals opponent's held item",
-    "Full Metal Body": "Prevents stat drops by opponents",
-    "Fur Coat": "Halves physical damage",
-    "Gale Wings": "Gives priority to Flying moves at full HP",
-    "Galvanize": "Normal moves become Electric-type",
-    "Gluttony": "Uses Berries earlier than usual",
-    "Gooey": "Lowers Speed on contact",
-    "Gorilla Tactics": "Boosts Attack but limits to one move",
-    "Grass Pelt": "Boosts Defense in Grassy Terrain",
-    "Grassy Surge": "Creates Grassy Terrain",
-    "Gulp Missile": "Catches prey when using Surf or Dive",
-    "Guts": "Boosts Attack when status-affected",
-    "Harvest": "May restore consumed Berry",
-    "Healer": "May heal ally's status conditions",
-    "Heatproof": "Halves damage from Fire moves",
-    "Heavy Metal": "Doubles weight",
-    "Honey Gather": "May find honey after battle",
-    "Huge Power": "Doubles Attack stat",
-    "Hunger Switch": "Changes form each turn",
-    "Hustle": "Boosts Attack but reduces accuracy",
-    "Hydration": "Heals status conditions in rain",
-    "Ice Body": "Restores HP in hail",
-    "Ice Face": "Takes one physical hit",
-    "Ice Scales": "Halves Special damage taken",
-    "Illuminate": "Raises wild encounter rate",
-    "Illusion": "Enters battle disguised as last party member",
-    "Immunity": "Prevents poisoning",
-    "Imposter": "Transforms into opponent",
-    "Infiltrator": "Bypasses barriers",
-    "Innards Out": "Damages attacker when KOed",
-    "Inner Focus": "Prevents flinching",
-    "Insomnia": "Prevents sleep",
-    "Iron Barbs": "Damages attackers on contact",
-    "Iron Fist": "Powers up punching moves",
-    "Justified": "Raises Attack when hit by Dark moves",
-    "Keen Eye": "Prevents accuracy drops",
-    "Klutz": "Cannot use held items",
-    "Leaf Guard": "Prevents status conditions in sunshine",
-    "Levitate": "Immune to Ground moves",
-    "Libero": "Changes type to match move used",
-    "Light Metal": "Halves weight",
-    "Lightning Rod": "Draws in Electric moves",
-    "Limber": "Prevents paralysis",
-    "Liquid Ooze": "Damages HP-draining opponents",
-    "Liquid Voice": "Sound moves become Water-type",
-    "Long Reach": "No contact is made with targets",
-    "Magic Bounce": "Reflects status moves",
-    "Magic Guard": "Only takes direct damage",
-    "Magician": "Steals held items when attacking",
-    "Magma Armor": "Prevents freezing",
-    "Magnet Pull": "Traps Steel-type Pokémon",
-    "Marvel Scale": "Boosts Defense when status-affected",
-    "Mega Launcher": "Powers up aura and pulse moves",
-    "Merciless": "Critical hits against poisoned targets",
-    "Mimicry": "Changes type based on terrain",
-    "Minus": "Boosts Sp. Attack with Plus or Minus present",
-    "Mirror Armor": "Reflects stat-lowering effects",
-    "Misty Surge": "Creates Misty Terrain",
-    "Moldy Breath": "May inflict poison on contact",
-    "Moody": "Raises one stat and lowers another",
-    "Motor Drive": "Boosts Speed when hit by Electric moves",
-    "Mountaineer": "Avoids damage from Rock moves",
-    "Multiscale": "Reduces damage at full HP",
-    "Multitype": "Changes type to match held plate",
-    "Mummy": "Contact spreads this ability",
-    "Natural Cure": "Heals status when switching out",
-    "Neuroforce": "Powers up super-effective moves",
-    "Neutralizing Gas": "Suppresses all other abilities",
-    "No Guard": "Ensures all moves hit",
-    "Normalize": "All moves become Normal-type",
-    "Oblivious": "Prevents infatuation",
-    "Overcoat": "Protects against weather and powder",
-    "Overgrow": "Powers up Grass moves in a pinch",
-    "Own Tempo": "Prevents confusion",
-    "Parental Bond": "Hits twice with first attack",
-    "Pastel Veil": "Prevents poisoning",
-    "Perish Body": "Both Pokémon faint after contact",
-    "Pickpocket": "Steals attacker's held item",
-    "Pickup": "May find items after battle",
-    "Pixilate": "Normal moves become Fairy-type",
-    "Plus": "Boosts Sp. Attack with Plus or Minus present",
-    "Poison Point": "May poison on contact",
-    "Poison Touch": "May poison on contact moves",
-    "Power Construct": "Changes form when HP is low",
-    "Power of Alchemy": "Copies ability of defeated ally",
-    "Power Spot": "Powers up ally moves",
-    "Prankster": "Gives priority to status moves",
-    "Pressure": "Makes opponents use more PP",
-    "Primordial Sea": "Creates heavy rain that prevents Fire moves",
-    "Prism Armor": "Reduces super-effective damage",
-    "Propeller Tail": "Moves can't be redirected",
-    "Protean": "Changes type to match move used",
-    "Psychic Surge": "Creates Psychic Terrain",
-    "Punk Rock": "Powers up sound moves and reduces damage from them",
-    "Pure Power": "Doubles Attack stat",
-    "Queenly Majesty": "Prevents priority moves",
-    "Quick Draw": "May move first",
-    "Quick Feet": "Boosts Speed when status-affected",
-    "Rain Dish": "Recovers HP in rain",
-    "Rattled": "Raises Speed when hit by Dark, Ghost, or Bug moves",
-    "Receiver": "Copies ability of defeated ally",
-    "Reckless": "Powers up moves with recoil",
-    "Refrigerate": "Normal moves become Ice-type",
-    "Regenerator": "Recovers HP when switching out",
-    "Ripen": "Doubles Berry effects",
-    "Rivalry": "Deals more damage to same gender",
-    "RKS System": "Changes type to match held memory",
-    "Rock Head": "Prevents recoil damage",
-    "Rough Skin": "Damages attackers on contact",
-    "Run Away": "Ensures successful escape",
-    "Sand Force": "Powers up moves in sandstorm",
-    "Sand Rush": "Doubles Speed in sandstorm",
-    "Sand Spit": "Creates sandstorm when hit",
-    "Sand Stream": "Summons sandstorm in battle",
-    "Sap Sipper": "Boosts Attack when hit by Grass moves",
-    "Schooling": "Changes form in a group",
-    "Scrappy": "Can hit Ghost-types with Normal and Fighting moves",
-    "Screen Cleaner": "Removes screen effects",
-    "Serene Grace": "Doubles secondary effect chance",
-    "Shadow Shield": "Reduces damage at full HP",
-    "Shadow Tag": "Prevents escape",
-    "Shed Skin": "May heal status conditions",
-    "Sheer Force": "Removes effects to power up moves",
-    "Shell Armor": "Prevents critical hits",
-    "Shield Dust": "Blocks additional effects",
-    "Shields Down": "Changes form when HP is low",
-    "Simple": "Doubles stat changes",
-    "Skill Link": "Multi-hit moves hit five times",
-    "Slow Start": "Temporarily halves Attack and Speed",
-    "Slush Rush": "Doubles Speed in hail",
-    "Sniper": "Powers up critical hits",
-    "Snow Cloak": "Raises evasion in hail",
-    "Snow Warning": "Summons hail in battle",
-    "Solar Power": "Boosts Sp. Attack in sun but loses HP",
-    "Solid Rock": "Reduces super-effective damage",
-    "Soul-Heart": "Raises Sp. Attack when another faints",
-    "Soundproof": "Immune to sound moves",
-    "Speed Boost": "Gradually increases Speed",
-    "Stakeout": "Double damage to switching targets",
-    "Stall": "Always moves last",
-    "Stalwart": "Moves can't be redirected",
-    "Stamina": "Raises Defense when hit",
-    "Stance Change": "Changes form when attacking",
-    "Static": "May paralyze on contact",
-    "Steadfast": "Raises Speed when flinching",
-    "Steam Engine": "Boosts Speed when hit by Fire or Water moves",
-    "Steelworker": "Powers up Steel moves",
-    "Steely Spirit": "Powers up allies' Steel moves",
-    "Stench": "May cause flinching",
-    "Sticky Hold": "Prevents item theft",
-    "Storm Drain": "Draws in Water moves",
-    "Strong Jaw": "Powers up biting moves",
-    "Sturdy": "Cannot be KOed in one hit at full HP",
-    "Suction Cups": "Prevents forced switching",
-    "Super Luck": "Raises critical hit ratio",
-    "Surge Surfer": "Doubles Speed in Electric Terrain",
-    "Swarm": "Powers up Bug moves in a pinch",
-    "Sweet Veil": "Prevents allies from sleeping",
-    "Swift Swim": "Doubles Speed in rain",
-    "Symbiosis": "Passes item to ally when needed",
-    "Synchronize": "Passes status conditions to attacker",
-    "Tangled Feet": "Raises evasion when confused",
-    "Tangling Hair": "Lowers Speed on contact",
-    "Technician": "Powers up weaker moves",
-    "Telepathy": "Avoids ally moves",
-    "Teravolt": "Ignores abilities when attacking",
-    "Thick Fat": "Resistant to Fire and Ice moves",
-    "Tinted Lens": "Powers up 'not very effective' moves",
-    "Torrent": "Powers up Water moves in a pinch",
-    "Tough Claws": "Powers up contact moves",
-    "Toxic Boost": "Powers up physical moves when poisoned",
-    "Trace": "Copies opponent's ability",
-    "Transistor": "Powers up Electric moves",
-    "Triage": "Gives priority to healing moves",
-    "Truant": "Skips every other turn",
-    "Turboblaze": "Ignores abilities when attacking",
-    "Unaware": "Ignores stat changes",
-    "Unburden": "Doubles Speed when item is lost",
-    "Unnerve": "Makes opponent nervous to eat Berries",
-    "Victory Star": "Raises accuracy for all",
-    "Vital Spirit": "Prevents sleep",
-    "Volt Absorb": "Heals when hit by Electric moves",
-    "Wandering Spirit": "Trades abilities on contact",
-    "Water Absorb": "Heals when hit by Water moves",
-    "Water Bubble": "Powers up Water moves and prevents burns",
-    "Water Compaction": "Sharply raises Defense when hit by Water moves",
-    "Water Veil": "Prevents burns",
-    "Weak Armor": "Trades Defense for Speed when hit",
-    "White Smoke": "Prevents stat reduction",
-    "Wimp Out": "Switches out when HP is low",
-    "Wonder Guard": "Only hit by super-effective moves",
-    "Wonder Skin": "May avoid status moves",
-    "Zen Mode": "Changes form at half HP",
-    "Zero to Hero": "Changes form after switching out",
-    "As One Spectrier": "Combines Unnerve and Grim Neigh abilities",
-    "Intrepid Sword": "Boosts Attack stat when entering battle",
-    "Soul Heart": "Raises Special Attack when another Pokémon faints",
-    "Grim Neigh": "Raises Special Attack when defeating a Pokémon",
-    "Mold Breaker": "Moves can be used regardless of abilities",
-    "Unseen Fist": "Contact moves bypass protection moves",
-    "As One Glastrier": "Combines Unnerve and Chilling Neigh abilities",
-    "Mind's Eye": "Enables moves to hit Ghost-type Pokémon",
-    "Chilling Neigh": "Raises Attack when defeating a Pokémon"
+    // Add more ability descriptions...
 };
